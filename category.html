@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+        crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.height = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.height = "0%";
+        }
+
+
+    </script>
+
+
+    <style>
+        #heading {
+            font-size: 6vh;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .navigation {
+            color: white;
+        }
+
+        .navigation:hover {
+            font-weight: bold;
+            color: orange;
+            text-decoration: none;
+        }
+
+
+        .overlay {
+            height: 0%;
+            width: 100%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 1);
+            overflow-y: hidden;
+            transition: 0.6s;
+        }
+
+        .overlay-content {
+            position: relative;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .overlay a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 36px;
+            color: #ffffff;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .overlay a:hover,
+        .overlay a:focus {
+            color: #f1f1f1;
+        }
+
+        .overlay .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .overlay {
+                overflow-y: auto;
+            }
+
+            .overlay a {
+                font-size: 20px
+            }
+
+            .overlay .closebtn {
+                font-size: 40px;
+                top: 15px;
+                right: 35px;
+            }
+        }
+    </style>
+
+    <title>NCRIE 2020</title>
+</head>
+
+<body>
+
+    <header class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-3 text-center">
+                <img src="Sage-University.png" />
+                <h3 style="font-family: 'Times New Roman';color:  #b30000; font-weight:bold;">Sage University</h3>
+            </div>
+
+            <div class="col-md-9 text-center p-4">
+                <h1 class="display-5 text-center" id="heading">National Conference On Research And Innovation
+                    In Education</h1>
+            </div>
+        </div>
+
+    </header>
+
+    <div class="container-fluid nav-scroller py-1 px-1 sticky-top" style="background-color: #00264d;">
+        <nav class="nav d-flex justify-content-between">
+            <a class="p-2 mx-1 navigation" href="index.html">Home</a>
+
+            <a class="p-2 mx-1 navigation" href="notice.html">Notices</a>
+
+            <a class="p-2 mx-1 navigation" href="">Guideline</a>
+
+            <a type="button" class="p-2 mx-1 navigation" data-toggle="modal" data-target="#exampleModal">Register</a>
+
+            <a class="p-2 mx-1 navigation" href="#" onclick="openNav()">Contact-Us</a>
+
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="overlay-content">
+                    <a style="color: white;"> For any query, please contact</a><br>
+                    <a style="color: white;">Prof. Kush Bhusanwar<br>
+                        <img src="phone.png" class="mr-2" />
+                        98936 30136</a><br>
+                    <a style="color: white;">Prof. O.P. Karada<br>
+                        <img src="phone.png" class="mr-2" />
+                        88786 81086</a><br>
+
+                </div>
+            </div>
+    </div>
+
+    </nav>
+    </div>
+
+
+    <div class="jumbotron ">
+        <div class="container-fluid">
+            <h1 class="display-5" style="font-weight: bold; font-family: 'Times New Roman';">Categories</h1>
+            <p> These themes are indicative of the scope of the conference but are not limited :</p>
+
+            <br>
+            <div class="row">
+                <div class="col-md-6 p-2" style="background-color: #b3cccc;">
+                    <h5>COVID19: Distance Learning in Times of Crisis</h5>
+                    <ul class="">
+                        <li class="">From face-to-face to Remote Learning</li>
+                        <li class="">Digital Technologies and Resources for Learning under Lockdown</li>
+                        <li class="">Rethinking Assessment</li>
+                        <li class="">Teacher Training and Support</li>
+                        <li class="">Keeping Students Engaged</li>
+                        <li class="">Inclusion and Equity to Minimize the Educational Disruption</li>
+                        <li class="">Ensuring Students and Teachers Well-being</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 p-2">
+                    <h5>Education: New Trends and Experiences</h5>
+                    <ul class="">
+                        <li class="">Education Practice Trends and Issues</li>
+                        <li class="">Early Childhood Education</li>
+                        <li class="">Primary and Secondary Education</li>
+                        <li class="">Undergraduate Education</li>
+                        <li class="">Post-graduate Education</li>
+                        <li class="">Vocational Training</li>
+                        <li class="">Adult Education</li>
+                        <li class="">Informal Learning</li>
+                        <li class="">Life-long learning</li>
+                        <li class="">Employability Issues and Trends</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 p-2">
+                    <h5>Pedagogical Methods and Innovations</h5>
+                    <ul class="">
+                        <li class="">Collaborative and Problem-based Learning</li>
+                        <li class="">Game-based Learning and Gamification</li>
+                        <li class="">Active and Experiential Learning</li>
+                        <li class="">Creativity and Design Thinking</li>
+                        <li class="">Critical Thinking and Problem Solving</li>
+                        <li class="">Language Learning Innovations</li>
+                        <li class="">Tutoring and Mentoring</li>
+                        <li class="">Assessment of Student Learning</li>
+                        <li class="">Learning Space Design</li>
+                        <li class="">21st Century Skills</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 p-2" style="background-color: #b3cccc;">
+                    <h5>Inclusive Learning, Cultural Diversity and Special Educattion</h5>
+                    <ul class="">
+                        <li class="">Barriers to Learning (ethnicity, age, etc.)</li>
+                        <li class="">Gender and Equality in Education</li>
+                        <li class="">Bullying Prevention and Awareness</li>
+                        <li class="">Digital Divide and Technological Exclusion</li>
+                        <li class="">Educating Individuals with Sensory and Motor Disabilities</li>
+                        <li class="">Educating Individuals with Intellectual Disabilities</li>
+                        <li class="">Lifespan Transitions and Employability</li>
+                        <li class="">Universal Design for Learning</li>
+                        <li class="">Assistive Technologies and Accessible Resources</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 p-2" style="background-color: #b3cccc;">
+                    <h5>Emerging Technologies in Education</h5>
+                    <ul class="">
+                        <li class="">Web 2.0 and Social Networking</li>
+                        <li class="">Social and Digital Media</li>
+                        <li class="">Educational/Serious Games and Software</li>
+                        <li class="">Videos for Learning and Educational Multimedia</li>
+                        <li class="">Animation and 3D Applications</li>
+                        <li class="">Virtual and Augmented Reality</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 p-2">
+                    <h5>E-content Management and Development</h5>
+                    <ul class="">
+                        <li class="">Digital Libraries and Repositories</li>
+                        <li class="">e-Portfolios</li>
+                        <li class="">User-Generated Content</li>
+                        <li class="">Open Educational Resources</li>
+                        <li class="">Learning Analytics</li>
+                        <li class="">Plagiarism and Intellectual Property Rights</li>
+                        <li class="">Knowledge Management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-4">
+
+            <div class="text-center m-4">
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
+                    data-target="#exampleModal">Register Here</button>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <img class="mb-2" src="Sage-University.png" alt="Sage_logo" width="150em" height="150em">
+                <small class="d-block mb-3 text-muted">Developed by - Akhilesh Parmar, Deepak Choudhary, Mrityunjay
+                    Sharma, Phaguni Prajapati, Tanushree Charvey </small>
+            </div>
+            <div class="col-md-3">
+                <h5>Features</h5>
+                <ul class="list-unstyled text-small">
+
+                    
+                    <li><a class="text-muted" href="notice.html">Notices</a></li>
+                    <li><a class="text-muted" href="">Guidelines</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4">
+                <h5>Contact-Us</h5>
+                <ul class="list-unstyled text-small">
+                    <li>
+                        <h6 class="">For any query, please contact</h6>
+                        <h6 class="text-muted">Prof. Kush Bhusanwar <br>98936 30136</h6>
+                        <h6 class="text-muted">Prof. O.P. Karada <br>88786 81086</h6>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-1">
+                <a href="#">Go to top</a>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Registration will start after acceptance
+                        Notification:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li>Academicians - &#8377 100/-</li>
+                        <li>Research Scholars - &#8377 100/-</li>
+                        <li>Students - &#8377 50/-</li>
+                        <li>Attendee Only - &#8377 50/-</li>
+                    </ul>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+
+
+
+</html>
