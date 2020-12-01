@@ -83,7 +83,7 @@
 
         .overlay-content {
             position: relative;
-            top: 25%;
+            top: 15%;
             width: 100%;
             text-align: center;
             margin-top: 30px;
@@ -155,22 +155,40 @@
 
             <a class="p-2 mx-1 navigation" href="notice.html">Notices</a>
 
-            <a class="p-2 mx-1 navigation" href="">Guideline</a>
+            <a class="p-2 mx-1 navigation" href="Guidelines.html">Guideline</a>
 
             <a type="button" class="p-2 mx-1 navigation" data-toggle="modal" data-target="#exampleModal">Register</a>
 
             <a class="p-2 mx-1 navigation" href="#" onclick="openNav()">Contact-Us</a>
 
-            <div id="myNav" class="overlay">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div id="myNav" class="overlay" style="overflow:scroll;">
+                <a href="javascript:void(0)" id="contact_close_btn" class="closebtn" onclick="closeNav()">&times;</a>
                 <div class="overlay-content">
-                    <a style="color: white;"> For any query, please contact</a><br>
-                    <a style="color: white;">Prof. Kush Bhusanwar<br>
-                        <img src="phone.png" class="mr-2" />
-                        98936 30136</a><br>
-                    <a style="color: white;">Prof. O.P. Karada<br>
-                        <img src="phone.png" class="mr-2" />
-                        88786 81086</a><br>
+                    <h3 style="color: white;"> For any query, please contact</h3><br>
+
+                    <div class="row m-4">
+                        <div class="col-md-6 text-center">
+
+                            <img src="phone.png" class="m-2" />
+                            <h3 style="font-family:'Times New Roman', Times, serif; color: white; margin-top:auto;">
+                                Prof. Kush Bhusanwar</h3>
+                            <h6 style="color:white;">AP CSE/IT, SIRT, SUI</h6><br>
+                            <h4 style="color: white;">98936 30136</h4>
+                            <hr>
+
+                        </div>
+                        <hr>
+                        <div class="col-md-6 text-center">
+
+                            <img src="phone.png" class="m-2" />
+                            <h3 style="color: white;">Prof. O.P. Karada</h3>
+                            <h6 style="color:white;">AP CSE/IT, SIRT, SUI</h6><br>
+                            <h4 style="color: white;">88786 81086</h4>
+                            <hr>
+
+                        </div>
+
+                    </div>
 
                 </div>
             </div>
@@ -283,36 +301,46 @@
 
 
     <footer class="container-fluid">
-        <div class="row">
-            <div class="col-md-4">
-                <img class="mb-2" src="Sage-University.png" alt="Sage_logo" width="150em" height="150em">
-                <small class="d-block mb-3 text-muted">Developed by - Akhilesh Parmar, Deepak Choudhary, Mrityunjay
-                    Sharma, Phaguni Prajapati, Tanushree Charvey </small>
-            </div>
+        <div class="row text-center">
             <div class="col-md-3">
-                <h5>Features</h5>
+                <img class="" src="Sage-University.png" alt="Sage_logo" height="130em">
+                <h3 class="pb-3" style="color: brown; font-family:'Times New Roman', Times, serif;">Sage University, Indore</h3>
+                <!--<small class="d-block mb-3 text-muted">Developed by - Akhilesh Parmar, Deepak Choudhary, Mrityunjay
+                            Sharma, Phaguni Prajapati, Tanushree Charvey </small>-->
+            </div>
+            <div class="col-md-2">
+                <h5 style="color: royalblue; font-weight:bold; font-family:Georgia, 'Times New Roman', Times, serif;">Features</h5>
                 <ul class="list-unstyled text-small">
-
-
-                    <li><a class="text-muted" href="notice.html">Notices</a></li>
-                    <li><a class="text-muted" href="">Guidelines</a></li>
+                    <li><a style=" color:black;" href="notice.html">Notices</a></li>
+                    <li><a style=" color:black;" href="Guidelines.html">Guidelines</a></li>
+                    <li><a style=" color:black;" href="category.html">Category</a></li>
+                    <li><a style=" color:black;" href="Collaboration.html">Collaboration</a></li>
+                    <li><a style=" color:black;" href="Committee.html">Committee</a></li>
                 </ul>
             </div>
 
             <div class="col-md-4">
-                <h5>Contact-Us</h5>
+                <h5 style="color: royalblue; font-weight:bold; font-family:Georgia, 'Times New Roman', Times, serif;">Contact-Us</h5>
                 <ul class="list-unstyled text-small">
                     <li>
                         <h6 class="">For any query, please contact</h6>
-                        <h6 class="text-muted">Prof. Kush Bhusanwar <br>98936 30136</h6>
-                        <h6 class="text-muted">Prof. O.P. Karada <br>88786 81086</h6>
+                        <h6 class="">Prof. Kush Bhusanwar <br>98936 30136</h6>
+                        <h6 class="">Prof. O.P. Karada <br>88786 81086</h6>
                     </li>
                 </ul>
             </div>
-            <div class="col-md-1">
-                <a href="#">Go to top</a>
+            <div class="col-md-3">
+                <h5 style="color: royalblue; font-weight:bold; font-family:Georgia, 'Times New Roman', Times, serif;">Guided and developed By - </h5>
+                <h5> Prof. Neha Bharani </h5>
+                AP CSE/IT, SIRT, SUI <br>
+                (Website Coordinator)
+                <ul class="list-unstyled text-small">
+                    <li>
+                        <h6 class="text-muted">Team : Akhilesh Parmar, Deepak Choudhary, Mrityunjay
+                            Sharma, Phaguni Prajapati, Tanushree Charvey</h6>
+                    </li>
+                </ul>
             </div>
-
         </div>
     </footer>
 

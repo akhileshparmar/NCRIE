@@ -45,7 +45,6 @@
         function closeNav() {
             document.getElementById("myNav").style.height = "0%";
         }
-
     </script>
 
 
@@ -65,14 +64,15 @@
             text-decoration: none;
         }
 
-        #download{
+        #cards {
             text-decoration: none;
-            color:black;
+            color: black;
         }
 
-        #download:hover{
-            color: blue;
+        #cards:hover {
+            color: rgb(0, 64, 255);
             font-weight: bold;
+            font-size: 1.3em;
         }
 
 
@@ -91,10 +91,12 @@
 
         .overlay-content {
             position: relative;
-            top: 25%;
+            top: 15%;
             width: 100%;
             text-align: center;
             margin-top: 30px;
+            scroll-behavior: auto;
+            height: auto;
         }
 
         .overlay a {
@@ -133,7 +135,58 @@
                 right: 35px;
             }
         }
+
+
+        #myBtn {
+            position: fixed;
+            bottom: 2%;
+            right: 2%;
+            border: none;
+            border-radius: 50%;
+            background: none;
+            color: grey;
+            padding: 1em;
+            font-size: 0.9em;
+            background: none;
+            outline: none;
+        }
+
+        #myBtn:hover {
+            color: black;
+            text-decoration: none;
+            outline: none;
+            font-size: 1em;
+        }
+
+        #myBtn:active {
+            outline: none;
+            text-decoration: none;
+            border: none;
+        }
     </style>
+
+    <script>
+        //Get the button:
+        mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        } 
+    </script>
+
 
     <link rel="icon" href="Sage-University.png" type="image/icon type">
     <title>NCRIE 2020</title>
@@ -161,20 +214,38 @@
         <nav class="nav d-flex justify-content-between">
             <a class="p-2 mx-1 navigation" href="notice.html">Notice</a>
             <a class="p-2 mx-1 navigation" href="category.html">Category</a>
-            <a class="p-2 mx-1 navigation" href="">Guideline</a>
+            <a class="p-2 mx-1 navigation" href="Guidelines.html">Guideline</a>
             <a type="button" class="p-2 mx-1 navigation" data-toggle="modal" data-target="#exampleModal">Register</a>
             <a class="p-2 mx-1 navigation" href="#" onclick="openNav()">Contact-Us</a>
 
-            <div id="myNav" class="overlay">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div id="myNav" class="overlay" style="overflow:scroll;">
+                <a href="javascript:void(0)" id="contact_close_btn" class="closebtn" onclick="closeNav()">&times;</a>
                 <div class="overlay-content">
-                    <a style="color: white;"> For any query, please contact</a><br>
-                    <a style="color: white;">Prof. Kush Bhusanwar<br>
-                        <img src="phone.png" class="mr-2" />
-                        98936 30136</a><br>
-                    <a style="color: white;">Prof. O.P. Karada<br>
-                        <img src="phone.png" class="mr-2" />
-                        88786 81086</a><br>
+                    <h3 style="color: white;"> For any query, please contact</h3><br>
+
+                    <div class="row m-4">
+                        <div class="col-md-6 text-center">
+
+                            <img src="phone.png" class="m-2" />
+                            <h3 style="font-family:'Times New Roman', Times, serif; color: white; margin-top:auto;">
+                                Prof. Kush Bhusanwar</h3>
+                            <h6 style="color:white;">AP CSE/IT, SIRT, SUI</h6><br>
+                            <h4 style="color: white;">98936 30136</h4>
+                            <hr>
+
+                        </div>
+                        <hr>
+                        <div class="col-md-6 text-center">
+
+                            <img src="phone.png" class="m-2" />
+                            <h3 style="color: white;">Prof. O.P. Karada</h3>
+                            <h6 style="color:white;">AP CSE/IT, SIRT, SUI</h6><br>
+                            <h4 style="color: white;">88786 81086</h4>
+                            <hr>
+
+                        </div>
+
+                    </div>
 
                 </div>
             </div>
@@ -200,47 +271,54 @@
 
             </div>
             <div class="col-md-2 py-3 text-center" style="margin:auto; ">
-                <!--<img src="ACM.jpg" class="img-thumbnail" alt="...">-->
-                <svg width="4em" height="4em" viewBox="0 0 16 16" class="bi bi-person-plus" fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                        d="M8 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6 5c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10zM13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" /><!--Developed by - Akhilesh Parmar, Deepak Choudhary, Mrityunjay Sharma, Phaguni Prajapati, Tanushree Charvey-->
-                </svg>
-                <h5>Collaboration</h5>
+                <a href="Collaboration.html" id="cards">
+
+                    <!--<img src="ACM.jpg" class="img-thumbnail" alt="...">-->
+                    <svg width="4em" height="4em" viewBox="0 0 16 16" class="bi bi-person-plus" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M8 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6 5c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10zM13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
+                        <!--Developed by - Akhilesh Parmar, Deepak Choudhary, Mrityunjay Sharma, Phaguni Prajapati, Tanushree Charvey-->
+                    </svg>
+                    <h5>Collaboration</h5>
+                </a>
             </div>
             <div class="col-md-2 py-3 text-center" style="margin:auto; background-color:#e9ecef;">
                 <!--<img src="ACM.jpg" class="img-thumbnail" alt="...">-->
-                <svg width="4em" height="4em" viewBox="0 0 16 16" class="bi bi-people" fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                        d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1h7.956a.274.274 0 0 0 .014-.002l.008-.002c-.002-.264-.167-1.03-.76-1.72C13.688 10.629 12.718 10 11 10c-1.717 0-2.687.63-3.24 1.276-.593.69-.759 1.457-.76 1.72a1.05 1.05 0 0 0 .022.004zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10c-1.668.02-2.615.64-3.16 1.276C1.163 11.97 1 12.739 1 13h3c0-1.045.323-2.086.92-3zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" />
-                </svg>
-                <h5>Committee</h5>
+                <a href="Committee.html" id="cards">
+                    <svg width="4em" height="4em" viewBox="0 0 16 16" class="bi bi-people" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1h7.956a.274.274 0 0 0 .014-.002l.008-.002c-.002-.264-.167-1.03-.76-1.72C13.688 10.629 12.718 10 11 10c-1.717 0-2.687.63-3.24 1.276-.593.69-.759 1.457-.76 1.72a1.05 1.05 0 0 0 .022.004zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10c-1.668.02-2.615.64-3.16 1.276C1.163 11.97 1 12.739 1 13h3c0-1.045.323-2.086.92-3zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" />
+                    </svg>
+                    <h5>Committee</h5>
+                </a>
 
             </div>
             <div class="col-md-2 py-3 text-center" style="margin:auto; ">
                 <!--<img src="ACM.jpg" class="img-thumbnail" alt="...">-->
-                <svg width="4em" height="4em" viewBox="0 0 16 16" class="bi bi-journal-bookmark" fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
-                    <path
-                        d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
-                    <path fill-rule="evenodd"
-                        d="M6 8V1h1v6.117L8.743 6.07a.5.5 0 0 1 .514 0L11 7.117V1h1v7a.5.5 0 0 1-.757.429L9 7.083 6.757 8.43A.5.5 0 0 1 6 8z" />
-                </svg>
-                <h5>Author Guideline</h5>
+                <a href="Guidelines.html" id="cards"><svg width="4em" height="4em" viewBox="0 0 16 16"
+                        class="bi bi-journal-bookmark" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
+                        <path
+                            d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
+                        <path fill-rule="evenodd"
+                            d="M6 8V1h1v6.117L8.743 6.07a.5.5 0 0 1 .514 0L11 7.117V1h1v7a.5.5 0 0 1-.757.429L9 7.083 6.757 8.43A.5.5 0 0 1 6 8z" />
+                    </svg>
+                    <h5>Author Guideline</h5>
+                </a>
             </div>
             <div class="col-md-2 py-3 text-center" style="margin:auto; background-color:#e9ecef;">
-                <a href="Submission_template.docx" id="download" download >
-                <svg width="4em" height="4em" viewBox="0 0 16 16" class="bi bi-cloud-arrow-down" fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                        d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383zm.653.757c-.757.653-1.153 1.44-1.153 2.056v.448l-.445.049C2.064 6.805 1 7.952 1 9.318 1 10.785 2.23 12 3.781 12h8.906C13.98 12 15 10.988 15 9.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 4.825 10.328 3 8 3a4.53 4.53 0 0 0-2.941 1.1z" />
-                    <path fill-rule="evenodd"
-                        d="M7.646 10.854a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 9.293V5.5a.5.5 0 0 0-1 0v3.793L6.354 8.146a.5.5 0 1 0-.708.708l2 2z" />
-                </svg>
-                <h5>Download</h5>
+                <a href="Research paper Template.docx" id="cards" download>
+                    <svg width="4em" height="4em" viewBox="0 0 16 16" class="bi bi-cloud-arrow-down" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383zm.653.757c-.757.653-1.153 1.44-1.153 2.056v.448l-.445.049C2.064 6.805 1 7.952 1 9.318 1 10.785 2.23 12 3.781 12h8.906C13.98 12 15 10.988 15 9.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 4.825 10.328 3 8 3a4.53 4.53 0 0 0-2.941 1.1z" />
+                        <path fill-rule="evenodd"
+                            d="M7.646 10.854a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 9.293V5.5a.5.5 0 0 0-1 0v3.793L6.354 8.146a.5.5 0 1 0-.708.708l2 2z" />
+                    </svg>
+                    <h5>Download</h5>
                 </a>
 
             </div>
@@ -267,9 +345,10 @@
 
 
     <div class="jumbotron jumbotron-fluid">
-        <div class="container"  style="font-family:Georgia, 'Times New Roman', Times, serif;">
+        <div class="container" style="font-family:Georgia, 'Times New Roman', Times, serif;">
             <h1 class="display-5">Dear Colleagues!</h1>
-            <p class="lead">&nbsp;&nbsp;It is our pleasure to invite you to the 2020 National Conference on Research and Innovation
+            <p class="lead">&nbsp;&nbsp;It is our pleasure to invite you to the 2020 National Conference on Research and
+                Innovation
                 in Education (NCRIE 2020) that will take place at CSE/IT, SIRT, SAGE University, Indore (Online Mode) ,
                 Madhya Pradesh, India. This conference provides opportunities for the researchers, academicians,
                 students and delegates to exchange new ideas and application experiences face to face, to establish
@@ -289,7 +368,7 @@
                 <div class="col-md-4 my-3 text-center">
                     <img src="hod_sir_ji.jpg" width="150em" height="150em"
                         class="bd-placeholder-img rounded-circle m-2" /><br />
-                    <h3>Dr. Lalji Prasad</h3>
+                    <h4>Dr. Lalji Prasad</h4>
                     <p style="font-family: 'Georgia'">HOD CSE/IT, SIRT, SUI</p>
                     <p style="font-family: 'Georgia'; font-weight:bold;">Convener</p>
                 </div>
@@ -297,7 +376,7 @@
                 <div class="col-md-4 my-3 text-center">
                     <img src="ati_mam.jpg" width="150em" height="150em"
                         class="bd-placeholder-img rounded-circle m-2" /><br />
-                    <h3>Prof. Ati Jain</h3>
+                    <h4>Prof. Ati Jain</h4>
                     <p style="font-family: 'Georgia'">AP CSE/IT, SIRT, SUI</p>
                     <p style="font-family: 'Georgia'; font-weight:bold;">Co-Convener</p>
                 </div>
@@ -305,7 +384,7 @@
                 <div class="col-md-4 my-3 text-center">
                     <img src="nishant_sir_ji.jpg" width="150em" height="150em"
                         class="bd-placeholder-img rounded-circle m-2" /><br />
-                    <h3>Prof. Nishant Vijayvargiya</h3>
+                    <h4>Prof. Nishant Vijayvargiya</h4>
                     <p style="font-family: 'Georgia'">AP CSE/IT, SIRT, SUI</p>
                     <p style="font-family: 'Georgia'; font-weight:bold;">Co-Convener</p>
                 </div>
@@ -340,7 +419,7 @@
                     <h4 style="font-family: 'Georgia'">Computer Society of India</h4>
                 </div>
                 <!-- /.col-lg-4 -->
-                
+
             </div>
         </div>
 
@@ -350,38 +429,57 @@
 
 
     <footer class="container-fluid">
-        <div class="row">
-            <div class="col-md-4">
-                <img class="mb-2" src="Sage-University.png" alt="Sage_logo" width="150em" height="150em">
-                <small class="d-block mb-3 text-muted">Developed by - Akhilesh Parmar, Deepak Choudhary, Mrityunjay
-                    Sharma, Phaguni Prajapati, Tanushree Charvey </small>
-            </div>
+        <div class="row text-center">
             <div class="col-md-3">
-                <h5>Features</h5>
+                <img class="" src="Sage-University.png" alt="Sage_logo" height="130em">
+                <h3 class="pb-3" style="color: brown; font-family:'Times New Roman', Times, serif;">Sage University, Indore</h3>
+                <!--<small class="d-block mb-3 text-muted">Developed by - Akhilesh Parmar, Deepak Choudhary, Mrityunjay
+                            Sharma, Phaguni Prajapati, Tanushree Charvey </small>-->
+            </div>
+            <div class="col-md-2">
+                <h5 style="color: royalblue; font-weight:bold; font-family:Georgia, 'Times New Roman', Times, serif;">Features</h5>
                 <ul class="list-unstyled text-small">
-                    <li><a class="text-muted" href="notice.html">Notices</a></li>
-                    <li><a class="text-muted" href="">Guidelines</a></li>
-                    <li><a class="text-muted" href="category.html">Category</a></li>
+                    <li><a style=" color:black;" href="notice.html">Notices</a></li>
+                    <li><a style=" color:black;" href="Guidelines.html">Guidelines</a></li>
+                    <li><a style=" color:black;" href="category.html">Category</a></li>
+                    <li><a style=" color:black;" href="Collaboration.html">Collaboration</a></li>
+                    <li><a style=" color:black;" href="Committee.html">Committee</a></li>
                 </ul>
             </div>
 
             <div class="col-md-4">
-                <h5>Contact-Us</h5>
+                <h5 style="color: royalblue; font-weight:bold; font-family:Georgia, 'Times New Roman', Times, serif;">Contact-Us</h5>
                 <ul class="list-unstyled text-small">
                     <li>
                         <h6 class="">For any query, please contact</h6>
-                        <h6 class="text-muted">Prof. Kush Bhusanwar <br>98936 30136</h6>
-                        <h6 class="text-muted">Prof. O.P. Karada <br>88786 81086</h6>
+                        <h6 class="">Prof. Kush Bhusanwar <br>98936 30136</h6>
+                        <h6 class="">Prof. O.P. Karada <br>88786 81086</h6>
                     </li>
                 </ul>
             </div>
-            <div class="col-md-1">
-                <a href="#">Go to top</a>
+            <div class="col-md-3">
+                <h5 style="color: royalblue; font-weight:bold; font-family:Georgia, 'Times New Roman', Times, serif;">Guided and developed By - </h5>
+                <h5> Prof. Neha Bharani </h5>
+                AP CSE/IT, SIRT, SUI <br>
+                (Website Coordinator)
+                <ul class="list-unstyled text-small">
+                    <li>
+                        <h6 class="text-muted">Team : Akhilesh Parmar, Deepak Choudhary, Mrityunjay
+                            Sharma, Phaguni Prajapati, Tanushree Charvey</h6>
+                    </li>
+                </ul>
             </div>
         </div>
     </footer>
 
-
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+        <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-arrow-up-circle" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+            <path fill-rule="evenodd"
+                d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z" />
+        </svg>
+    </button>
 
 
     <!-- Modal -->
@@ -396,7 +494,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    
+
                     <table class="table">
                         <tbody>
                             <tr>
@@ -432,8 +530,6 @@
 
 
 </body>
-
-
 
 
 </html>
