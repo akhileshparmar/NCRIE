@@ -22,7 +22,8 @@
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
 
-    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS-->
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS--><!-- Optional JavaScript; choose one of the two! Developed by - Akhilesh Parmar, Deepak Choudhary, Mrityunjay Sharma, Phaguni Prajapati, Tanushree Charvey-->
+    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -52,7 +53,7 @@
 
     <style>
         #heading {
-            font-size: 6vh;
+            font-size: 2.6em;
             font-family: 'Times New Roman', Times, serif;
         }
 
@@ -82,14 +83,16 @@
 
         .overlay-content {
             position: relative;
-            top: 15%;
+            top: 10%;
             width: 100%;
             text-align: center;
-            margin-top: 30px;
+            margin-top: 0px;
+            scroll-behavior: auto;
+            height: auto;
+            overflow-x: hidden;
         }
 
         .overlay a {
-            padding: 8px;
             text-decoration: none;
             font-size: 36px;
             color: #ffffff;
@@ -104,8 +107,7 @@
 
         .overlay .closebtn {
             position: absolute;
-            top: 20px;
-            right: 45px;
+            right: 20px;
             font-size: 60px;
         }
 
@@ -124,7 +126,75 @@
                 right: 35px;
             }
         }
+
+
+        #myBtn {
+            position: fixed;
+            bottom: 2%;
+            right: 2%;
+            border: none;
+            border-radius: 50%;
+            background: none;
+            color: grey;
+            padding: 1em;
+            font-size: 0.9em;
+            background: none;
+            outline: none;
+        }
+
+        #myBtn:hover {
+            color: black;
+            text-decoration: none;
+            outline: none;
+            font-size: 1em;
+        }
+
+        #myBtn:active {
+            outline: none;
+            text-decoration: none;
+            border: none;
+        }
     </style>
+
+    <script>
+        //Get the button:
+        mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera<!-- Optional JavaScript; choose one of the two! Developed by - Akhilesh Parmar, Deepak Choudhary, Mrityunjay Sharma, Phaguni Prajapati, Tanushree Charvey-->
+    
+        } 
+    </script>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 200);
+        }
+    </script>
 
     <link rel="icon" href="Sage-University.png" type="image/icon type">
     <title>NCRIE 2020</title>
@@ -148,45 +218,69 @@
 
     </header>
 
-    <div class="container-fluid nav-scroller py-1 px-1 sticky-top" style="background-color: #00264d;">
+    <div class="container-fluid nav-scroller py-1 px-1" style="background-color: #00264d;">
         <nav class="nav d-flex justify-content-between">
-            <a class="p-2 mx-1 navigation" href="index.html">Home</a>
-            <a class="p-2 mx-1 navigation" href="notice.html">Notices</a>
 
-            <a class="p-2 mx-1 navigation" href="category.html">Category</a>
-            <a class="p-2 mx-1 navigation" href="Guidelines.html">Guidelines</a>
-
-            <a type="button" class="p-2 mx-1 navigation" data-toggle="modal" data-target="#exampleModal">Register</a>
-            <a class="p-2 mx-1 navigation" href="#" onclick="openNav()">Contact-Us</a>
+            <a class="py-2 mx-3 navigation" href="index.html">Home</a>
+            <a class="py-2 mx-3 navigation" href="notice.html">Notices</a>
+            <a class="py-2 mx-3 navigation" href="category.html">Category</a>
+            <a class="py-2 mx-3 navigation" href="Guidelines.html">Guideline</a>
+            <a class="py-2 mx-3 navigation" href="journal.html">Publication</a>
+            <a class="py-2 mx-3 navigation" href="Committee.html">Committee</a>
+            <a type="button" class="py-2 mx-3 navigation" data-toggle="modal" data-target="#exampleModal">Register</a>
+            <a class="py-2 mx-3 navigation" href="#" onclick="openNav()">Contact-Us</a>
 
             <div id="myNav" class="overlay" style="overflow:scroll;">
                 <a href="javascript:void(0)" id="contact_close_btn" class="closebtn" onclick="closeNav()">&times;</a>
                 <div class="overlay-content">
-                    <h3 style="color: white;"> For any query, please contact</h3><br>
+                    <h3 style="color: white; font-family:'Times New Roman', Times, serif"> For Any Query, Please Contact
+                    </h3><br>
 
-                    <div class="row m-4">
+                    <div class="row">
                         <div class="col-md-6 text-center">
 
-                            <img src="phone.png" class="m-2" />
+
+                            <img src="kush_sir.jpg" width="150em" height="150em"
+                                class="bd-placeholder-img rounded-circle m-2" /><br />
                             <h3 style="font-family:'Times New Roman', Times, serif; color: white; margin-top:auto;">
                                 Prof. Kush Bhusanwar</h3>
-                            <h6 style="color:white;">AP CSE/IT, SIRT, SUI</h6><br>
+                            <h6 style="color:white;">AP, CSE/IT, SIRT, SUI</h6>
+                            <img src="phone.png" class="m-2" />
                             <h4 style="color: white;">98936 30136</h4>
-                            <hr>
 
                         </div>
                         <hr>
                         <div class="col-md-6 text-center">
+                            <img src="O.P_sir.jpeg" width="150em" height="150em"
+                                class="bd-placeholder-img rounded-circle m-2" /><br />
 
-                            <img src="phone.png" class="m-2" />
                             <h3 style="color: white;">Prof. O.P. Karada</h3>
-                            <h6 style="color:white;">AP CSE/IT, SIRT, SUI</h6><br>
+                            <h6 style="color:white;">AP, CSE/IT, SIRT, SUI</h6>
+                            <img src="phone.png" class="m-2" />
                             <h4 style="color: white;">88786 81086</h4>
-                            <hr>
 
                         </div>
-
                     </div>
+
+                    <hr color="white">
+                    <h4 style="color: red;">Sage University</h4>
+                    <p style="color: white;" class="mx-2"> Kailod Kartal, Indore-Dewas
+                        By-Pass Road, Indore - 452020</p>
+
+                    <p class="text-center mb-2">
+                        <a style="display: inline;" href="https://www.facebook.com/sageuniversityindore"> <img
+                                src="Facebook.jpeg" height="50em" class="bd-placeholder-img rounded-circle mx-1" /> </a>
+                        <a style="display: inline;" href="https://twitter.com/SAGE_INDORE"> <img src="Twitter.jpeg"
+                                height="50em" class="bd-placeholder-img rounded-circle mx-1" /> </a>
+                        <a style="display: inline;" href="https://www.instagram.com/sageuniversityindore/"> <img
+                                src="Instagram.jpeg" height="50em" class="bd-placeholder-img rounded-circle mx-1" />
+                        </a>
+                        <a style="display: inline;" href="https://www.linkedin.com/company/14619320/admin/"> <img
+                                src="LinkedIn.jpeg" height="50em" class="bd-placeholder-img rounded-circle mx-1" /> </a>
+                        <a style="display: inline;" href="https://www.youtube.com/channel/UCftPiFHp2N-2wZEzZH3DNrw">
+                            <img src="Youtube.jpeg" height="50em" class="bd-placeholder-img rounded-circle mx-1" /> </a>
+
+                    </p>
 
                 </div>
             </div>
@@ -196,16 +290,17 @@
     </div>
 
 
-    <div class="jumbotron ">
+    <div class="jumbotron" style="font-family:Georgia, 'Times New Roman', Times, serif;">
         <div class="container-fluid">
-            <h1 class="display-5 text-center" style="font-weight: bold; font-family: 'Times New Roman';">Collaboration
+            <h1 class="display-5 text-center" id="collaboration" style=" font-family: 'Times New Roman';">Collaboration
             </h1>
             <br>
 
             <div class="container text-center">
                 <img src="IIC.png" width="150em" height="150em" class="bd-placeholder-img rounded-circle m-2" /><br />
-                <h4 style="font-family: 'Georgia'">Institution's Innovation Council</h4>
-                <p>Ministry of Human Resource Development (MHRD), Govt. of India has established ‘MHRD’s Innovation Cell
+                <h4 style="font-family: 'Georgia'"> <u> Institution's Innovation Council</u></h4>
+                <p class="text-left my-4 lead">Ministry of Human Resource Development (MHRD), Govt. of India has established
+                    ‘MHRD’s Innovation Cell
                     (MIC)’ to systematically foster the culture of Innovation amongst all Higher Education Institutions
                     (HEIs). The primary mandate of MIC is to encourage, inspire and nurture young students by supporting
                     them to work with new ideas and transform them into prototypes while they are in formative years.
@@ -214,11 +309,11 @@
                     multitudinous modes leading to an innovation promotion eco-system in the campuses. It’s our proud
                     privilege to announce that Bharati Vidyapeeth College of Engineering,Navi Mumbai.</p>
 
-                <hr>
+                <hr id="ACM">
 
                 <img src="ACM.jpg" width="150em" height="150em" class="bd-placeholder-img rounded-circle m-2" /><br />
-                <h4 style="font-family: 'Georgia'">Association for Computing Machinery</h4>
-                <p><b>SIRT-Indore ACM Student Chapter</b>
+                <h4 style="font-family: 'Georgia'"> <u> Association for Computing Machinery </u></h4>
+                <p class="text-left my-4 lead"><b>SIRT-Indore ACM Student Chapter</b>
                     ACM Student chapters SIRT was established in 2018. This chapter serves as hubs of activity for ACM
                     members and the computing community at large. It provides seminars, lectures, learning forums and
                     networking opportunities with peers and experts across the computing spectrum.
@@ -231,11 +326,11 @@
                     of personal support after graduation and support the next generation of technical women.
                 </p>
 
-                <hr>
+                <hr id="CSI">
 
-                <img src="CSI.png" width="150em" height="150em" class="bd-placeholder-img rounded-circle m-2" /><br />
-                <h4 style="font-family: 'Georgia'">Computer Society of India</h4>
-                <p>
+                <img  src="CSI.png" width="150em" height="150em" class="bd-placeholder-img rounded-circle m-2" /><br />
+                <h4 style="font-family: 'Georgia'" ><u>Computer Society of India</u></h4>
+                <p class="text-left my-4 lead">
                     <b> Computer Society of India (CSI)</b> is the first and largest body of computer professionals in
                     India. It was started on 6 March 1965 by a few computer professionals and has now grown to be the
                     national body representing computer professionals. Today the CSI takes pride in being the largest
@@ -258,7 +353,16 @@
 
         </div>
 
+        <hr>
 
+        <div class="container">
+            <h1 style="font-family: 'Times New Roman';">Sage Groups</h1>
+            <div class="row">
+                <div class="col-sm-4 py-4"><img class="mySlides w3-animate-fading" width="100%" src="logo.png"></div>
+                <div class="col-sm-4 py-4"><img class="mySlides w3-animate-fading" width="100%" src="1.jpg"></div>
+                <div class="col-sm-4 py-4"><img class="mySlides w3-animate-fading" width="100%" src="5.jpg"></div>
+            </div>
+        </div>
 
 
 
@@ -270,12 +374,14 @@
         <div class="row text-center">
             <div class="col-md-3">
                 <img class="" src="Sage-University.png" alt="Sage_logo" height="130em">
-                <h3 class="pb-3" style="color: brown; font-family:'Times New Roman', Times, serif;">Sage University, Indore</h3>
+                <h3 class="pb-3" style="color: brown; font-family:'Times New Roman', Times, serif;">Sage University,
+                    Indore</h3>
                 <!--<small class="d-block mb-3 text-muted">Developed by - Akhilesh Parmar, Deepak Choudhary, Mrityunjay
                             Sharma, Phaguni Prajapati, Tanushree Charvey </small>-->
             </div>
             <div class="col-md-2">
-                <h5 style="color: royalblue; font-weight:bold; font-family:Georgia, 'Times New Roman', Times, serif;">Features</h5>
+                <h5 style="color: royalblue; font-weight:bold; font-family:Georgia, 'Times New Roman', Times, serif;">
+                    <u>Features</u></h5>
                 <ul class="list-unstyled text-small">
                     <li><a style=" color:black;" href="notice.html">Notices</a></li>
                     <li><a style=" color:black;" href="Guidelines.html">Guidelines</a></li>
@@ -285,8 +391,9 @@
                 </ul>
             </div>
 
-            <div class="col-md-4">
-                <h5 style="color: royalblue; font-weight:bold; font-family:Georgia, 'Times New Roman', Times, serif;">Contact-Us</h5>
+            <div class="col-md-3">
+                <h5 style="color: royalblue; font-weight:bold; font-family:Georgia, 'Times New Roman', Times, serif;">
+                    <u>Contact-Us</u></h5>
                 <ul class="list-unstyled text-small">
                     <li>
                         <h6 class="">For any query, please contact</h6>
@@ -295,20 +402,33 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-md-3">
-                <h5 style="color: royalblue; font-weight:bold; font-family:Georgia, 'Times New Roman', Times, serif;">Guided and developed By - </h5>
-                <h5> Prof. Neha Bharani </h5>
+            <div class="col-md-4">
+                <h5 style="color: royalblue; font-weight:bold; font-family:Georgia, 'Times New Roman', Times, serif;">
+                    <u>Guided and developed By</u> - </h5>
+                <h5 class=""> Prof. Neha Bharani </h5>
                 AP CSE/IT, SIRT, SUI <br>
                 (Website Coordinator)
-                <ul class="list-unstyled text-small">
+                <hr>
+                <ul class="list-unstyled">
                     <li>
                         <h6 class="text-muted">Team : Akhilesh Parmar, Deepak Choudhary, Mrityunjay
                             Sharma, Phaguni Prajapati, Tanushree Charvey</h6>
+                            <h6 class="text-muted">IT 5th Sem students</h6>
                     </li>
                 </ul>
             </div>
         </div>
     </footer>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+        <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-arrow-up-circle" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+            <path fill-rule="evenodd"
+                d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z" /><!-- Optional JavaScript; choose one of the two! Developed by - Akhilesh Parmar, Deepak Choudhary, Mrityunjay Sharma, Phaguni Prajapati, Tanushree Charvey-->
+    
+        </svg>
+    </button>
 
 
     <!-- Modal -->
@@ -348,7 +468,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Register</button>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdpSUJS5yag6nHccBDn6HD24WzMJM31VG53x6TPc1PASm1I6Q/viewform?usp=sf_link" type="button" class="btn btn-primary">Register</a>
                 </div>
             </div>
         </div>
