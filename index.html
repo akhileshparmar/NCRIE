@@ -189,22 +189,6 @@
         } 
     </script>
 
-    <script>
-        var myIndex = 0;
-        carousel();
-
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            myIndex++;
-            if (myIndex > x.length) { myIndex = 1 }
-            x[myIndex - 1].style.display = "block";
-            setTimeout(carousel, 200);
-        }
-    </script>
 
 
     <link rel="icon" href="Sage-University.png" type="image/icon type">
@@ -391,7 +375,7 @@
 
 
     <div class="jumbotron jumbotron-fluid">
-        <div class="container" style="font-family:Georgia, 'Times New Roman', Times, serif;">
+        <div class="container" style="font-family:Georgia, 'Times New Roman', Times, serif; text-align:justify;">
             <h1 class="display-5">Dear Colleagues!</h1>
             <p class="lead">It is our pleasure to invite you to the 2020 National Conference on Research and
                 Innovation
@@ -478,14 +462,22 @@
 
         <hr>
 
-        <div class="container">
-            <h1 style="font-family: 'Times New Roman';">Sage Groups</h1>
-            <div class="row">
-                <div class="col-sm-4 py-4"><img class="mySlides w3-animate-fading" width="100%" src="logo.png"></div>
-                <div class="col-sm-4 py-4"><img class="mySlides w3-animate-fading" width="100%" src="1.jpg"></div>
-                <div class="col-sm-4 py-4"><img class="mySlides w3-animate-fading" width="100%" src="5.jpg"></div>
-            </div>
+        <h1 style="font-family: 'Times New Roman';" class="container">Sage Groups</h1>
+        <div class="container-fluid">
+            <marquee style="" scrolldelay="" direction="left">
+
+                <img src="3.jpg" class="img-responsive mx-4">
+    
+                <img src="1.jpeg" class="img-responsive mx-4">
+    
+                <img src="5.jpg" class="img-responsive mx-4">
+    
+    
+    
+            </marquee>
         </div>
+
+        
 
     </div>
 
@@ -590,7 +582,8 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdpSUJS5yag6nHccBDn6HD24WzMJM31VG53x6TPc1PASm1I6Q/viewform?usp=sf_link" type="button" class="btn btn-primary">Register</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdpSUJS5yag6nHccBDn6HD24WzMJM31VG53x6TPc1PASm1I6Q/viewform?usp=sf_link"
+                        type="button" class="btn btn-primary">Register</a>
                 </div>
             </div>
         </div>

@@ -175,22 +175,7 @@
         } 
     </script>
 
-    <script>
-        var myIndex = 0;
-        carousel();
 
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            myIndex++;
-            if (myIndex > x.length) { myIndex = 1 }
-            x[myIndex - 1].style.display = "block";
-            setTimeout(carousel, 200);
-        }
-    </script>
 
     <link rel="icon" href="Sage-University.png" type="image/icon type">
     <title>NCRIE 2020</title>
@@ -344,7 +329,6 @@
                             <td>
 
                                 - Prof. Mubeen Khan (+91 98269 68074)<br>
-                                - Prof. Neha Bharani (+91 73548 81810)<br>
                             </td>
 
 
@@ -394,7 +378,7 @@
 
                             <td>
 
-                                - Prof. Shweta Agrawal (+91 93003 92334) <br>
+                                
                                 - Prof. Rachana Raghuwanshi (+91 78797 70930) <br>
                                 - Prof. Shubha Dubey (+91 98262 54420) <br>
 
@@ -410,7 +394,7 @@
                                 iii) Prof. Ashutush Lokhande<br></td>
 
                             <td>
-                                - Prof. Virendra Singh (+91 81205 49384) <br>
+                                
                                 - Prof. Kush Bhusanwar (+91 98936 30136)<br>
                                 - Prof. Snehlata Mishra (+91 98264 32416) <br>
                                 - Prof. Ashutush Lokhande (+91 88278 41058) <br>
@@ -432,13 +416,19 @@
 
         <hr>
 
-        <div class="container">
-            <h1 style="font-family: 'Times New Roman';">Sage Groups</h1>
-            <div class="row">
-                <div class="col-sm-4 py-4"><img class="mySlides w3-animate-fading" width="100%" src="logo.png"></div>
-                <div class="col-sm-4 py-4"><img class="mySlides w3-animate-fading" width="100%" src="1.jpg"></div>
-                <div class="col-sm-4 py-4"><img class="mySlides w3-animate-fading" width="100%" src="5.jpg"></div>
-            </div>
+        <h1 style="font-family: 'Times New Roman';" class="container">Sage Groups</h1>
+        <div class="container-fluid">
+            <marquee style="" scrolldelay="" direction="left">
+
+                <img src="3.jpg" class="img-responsive mx-4">
+    
+                <img src="1.jpeg" class="img-responsive mx-4">
+    
+                <img src="5.jpg" class="img-responsive mx-4">
+    
+    
+    
+            </marquee>
         </div>
 
     </div>

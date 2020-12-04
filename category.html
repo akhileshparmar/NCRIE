@@ -178,22 +178,7 @@
     </script>
 
 
-    <script>
-        var myIndex = 0;
-        carousel();
-
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            myIndex++;
-            if (myIndex > x.length) { myIndex = 1 }
-            x[myIndex - 1].style.display = "block";
-            setTimeout(carousel, 200);
-        }
-    </script>
+   
 
     <link rel="icon" href="Sage-University.png" type="image/icon type">
     <title>NCRIE 2020</title>
@@ -387,13 +372,20 @@
         </div>
 
         <hr>
-        <div class="container">
-            <h1 style="font-family: 'Times New Roman';">Sage Groups</h1>
-            <div class="row">
-                <div class="col-sm-4 py-4"><img class="mySlides w3-animate-fading" width="100%" src="logo.png"></div>
-                <div class="col-sm-4 py-4"><img class="mySlides w3-animate-fading" width="100%" src="1.jpg"></div>
-                <div class="col-sm-4 py-4"><img class="mySlides w3-animate-fading" width="100%" src="5.jpg"></div>
-            </div>
+
+        <h1 style="font-family: 'Times New Roman';" class="container">Sage Groups</h1>
+        <div class="container-fluid">
+            <marquee style="" scrolldelay="" direction="left">
+
+                <img src="3.jpg" class="img-responsive mx-4">
+    
+                <img src="1.jpeg" class="img-responsive mx-4">
+    
+                <img src="5.jpg" class="img-responsive mx-4">
+    
+    
+    
+            </marquee>
         </div>
 
 
